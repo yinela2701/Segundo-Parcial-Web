@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import ImageProfile from '../assets/PokemonProfile.jpg'
-
+import ImageProfile from '../assets/PokemonProfile.png'
 import appFirebase from "../credenciales";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 const auth = getAuth(appFirebase)

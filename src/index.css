@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
+
 :root {
 	--color-fire: #ff7402;
 	--color-grass: #9bcc50;
@@ -24,6 +25,8 @@
 
 	--color-primary: #006d77;
 	--color-primary-hover: #83c5be;
+
+	--color-primary-logo: #730202;
 }
 
 * {
@@ -34,6 +37,13 @@
 
 body {
 	font-family: 'Montserrat';
+
+	background-image: url('./background.jpg');
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen en el cuerpo de la página */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+	background-attachment: fixed; /* Opcional: hace que el fondo no se desplace con el contenido */
+	
 }
 /* Globales */
 .container {
@@ -66,7 +76,7 @@ header form {
 	align-items: center;
 	gap: 10px;
 
-	border: 1px solid #555;
+	border: 1px solid white;
 	padding: 15px 20px;
 	border-radius: 25px;
 }
@@ -78,12 +88,13 @@ header form {
 	border: none;
 	outline: none;
 	font-size: 15px;
+	background-color: transparent;
 }
 
 .icon-search {
 	width: 20px;
 	height: 20px;
-	stroke: #555;
+	stroke: white;
 }
 
 .btn-search {
@@ -103,6 +114,15 @@ header form {
 	background-color: var(--color-primary-hover);
 	color: #000;
 }
+.form-group input{
+	color:  white;
+}
+
+.form-group input::placeholder {
+    color: white; 
+    opacity: 0.5; 
+}
+
 
 /* Btn Filter */
 .container-filter {
@@ -137,7 +157,7 @@ header form {
 }
 
 .card-img {
-	background-color: #f2f2f2;
+	background-color: transparent;
 
 	display: flex;
 	align-items: center;
@@ -161,7 +181,7 @@ header form {
 
 .pokemon-id {
 	display: block;
-	color: #888;
+	color: #fff;
 	margin-bottom: 15px;
 }
 
@@ -369,6 +389,10 @@ Styles of Pokemon Single Page
 .group-info p {
 	font-weight: 700;
 	font-size: 20px;
+	color:#fff;
+}
+.group-info span {
+	color:#fff;
 }
 
 /* Stats */
@@ -377,6 +401,10 @@ Styles of Pokemon Single Page
 	gap: 50px;
 	align-items: center;
 }
+.container-stats h1 {
+	color:#fff;
+}
+
 
 .stats {
 	display: flex;
@@ -395,6 +423,7 @@ Styles of Pokemon Single Page
 	flex: 20%;
 	font-weight: 500;
 	font-size: 18px;
+	color:#fff;
 }
 
 .progress-bar {
@@ -448,22 +477,32 @@ Styles of Pokemon Single Page
 }
 
 /*Estilos del login*/
+
 .padre {
     width: 500px;
     height: 300px; 
     position: absolute; 
-    top: 40%; 
+    top: 30%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
+	background-color: transparent;
+	
 }
+	
 .card card-body{
     display: flex;
     align-items: center;
+	
+}
+
+.card {
+	background-color: transparent;
+	border: none;
 }
 
 .estilo-profile{
     border-radius: 50%;
-    height: 120px;
+    height: 140px;
     width: 120px;
     margin: 0 auto;
     margin-top: 20px;
@@ -472,41 +511,49 @@ Styles of Pokemon Single Page
 }
 
 .cajatexto{
-    background-color: #cccccc40;
+    background-color: rgba(255, 255, 255, 0.5);
     border-color: slategray;
     border-radius: 30px;
     width: 100%;
     padding: 15px;
     border-width: 0px;
     margin-bottom: 20px;
+
 }
 
+.cajatexto::placeholder {
+    color: #4d5b64;
+    opacity: 1;
+}
+
+
 .cajatexto:focus{
-    outline: 1px solid cornflowerblue;
-    box-shadow: 0 0 8px cornflowerblue;
+    outline: 1px solid #9bcc50;
+    box-shadow: 0 0 10px #9bcc50;
+	
 }
 
 .btn-form{
-    background-color: #0d6efd;
-    border-color: slategray;
+    background-color: #006d77;
+    border-color: rgb(255, 255, 255);
     border-radius: 30px;
     width: 100%;
     padding: 15px;
     border-width: 0px;
     margin-bottom: 20px;
-    color:white;
-
+	color: white;
 }
 
 .texto{
     font-size: 20px;
-    color: slategray;
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin-top : 5px;
+
 }
 
 .btn-switch{
-    background-color: darkblue ;
+    background-color:#d56723;
     border-radius: 30px;
     padding: 8px;
     border-width: 0px;
